@@ -1,9 +1,7 @@
 <template>
-  <div class="prose post">
+  <div class="prose email">
     <h1 class="post-title">{{ $route?.meta?.post?.title }}</h1>
     <div class="post-body"><router-view></router-view></div>
-    <div>&nbsp;</div>
-    <div><router-link to="/">Back to posts listing</router-link></div>
   </div>
 </template>
 

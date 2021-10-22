@@ -1,6 +1,7 @@
 import { RouteRecordRaw } from "vue-router"
 import { Logger } from "zeed"
 import AppBlog from "./components/app-blog.vue"
+import AppEmail from "./components/app-email.vue"
 import meta from "./metadata.json"
 
 const log = Logger("router")
@@ -23,8 +24,27 @@ export const routes: Array<RouteRecordRaw> = [
       },
       ...meta.map((post) => {
         return {
-          path: post.href,
+          path: post.slug,
           name: `posts-${post.slug}`,
+          props: { post, name: post.name },
+          meta: { post },
+          component: () => import(`./posts/${post.name}.md`),
+        }
+      }),
+    ],
+  },
+
+  {
+    path: "/email",
+    component: AppEmail,
+    meta: {
+      pure: true,
+    },
+    children: [
+      ...meta.map((post) => {
+        return {
+          path: post.slug,
+          name: `email-${post.slug}`,
           props: { post, name: post.name },
           meta: { post },
           component: () => import(`./posts/${post.name}.md`),

@@ -20,9 +20,14 @@ useHead({
 </script>
 
 <template>
-  <app-header></app-header>
-  <div class="app-content">
+  <template v-if="$route.meta.pure">
     <router-view></router-view>
-  </div>
-  <app-footer></app-footer>
+  </template>
+  <template v-else>
+    <app-header></app-header>
+    <div class="app-content">
+      <router-view></router-view>
+    </div>
+    <app-footer></app-footer>
+  </template>
 </template>
