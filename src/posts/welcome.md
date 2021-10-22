@@ -18,3 +18,5 @@ Development must also be fun, and unfortunately this is quickly lost when there 
 Even when it comes to development environments, Xcode isn't as great as it likes to pretend to be. VSCode and IntelliJ offer features that you can only dream of in Xcode, and especially in areas that are not directly related to development. Plugins that already existed in Xcode in [better flexibility](https://github.com/holtwick/HOStringSense-for-Xcode) are the salt in the soup in the other IDEs.
 
 So I close the first entry in this developer diary and would like to go further in depth on certain selected topics in the next articles. Because as with a real diary, what is written down is sometimes also a treasure trove and inspiration for later projects. In this sense, happy coding.
+
+(Source code of this blog is available at [Github](https://github.com/viidoo-it/how))
