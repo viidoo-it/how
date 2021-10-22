@@ -1,0 +1,43 @@
+{
+  "name": "viidoo-blog",
+  "version": "0.1.1",
+  "scripts": {
+    "start": "LEVEL=* NODE_OPTIONS=--enable-source-maps vite --force --clearScreen=false",
+    "dev": "vite",
+    "build": " NODE_ENV=production vite-ssg build",
+    "build-old": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview",
+    "dist": "serve dist",
+    "upload": "rsync -avz dist/* cy:public_html/how.viidoo.it"
+  },
+  "dependencies": {
+    "@vueuse/core": "^6.7.3",
+    "@vueuse/head": "^0.6.0",
+    "inter-ui": "^3.19.3",
+    "prism-theme-vars": "^0.2.2",
+    "twindy": "^0.13.6",
+    "twindy-headless": "^0.11.13",
+    "vue": "^3.2.16",
+    "vue-router": "4",
+    "zeed": "^0.7.48"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.2",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "cheap-watch": "^1.0.4",
+    "critters": "^0.0.11",
+    "feed": "^4.2.2",
+    "gray-matter": "^4.0.3",
+    "markdown-it-anchor": "^8.4.1",
+    "markdown-it-link-attributes": "^3.0.0",
+    "markdown-it-prism": "^2.2.1",
+    "stylus": "^0.55.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.6.10",
+    "vite-imagetools": "^3.8.0",
+    "vite-plugin-md": "^0.11.2",
+    "vite-ssg": "^0.15.4",
+    "vue-tsc": "^0.28.7",
+    "zeed-dom": "^0.9.11"
+  }
+}

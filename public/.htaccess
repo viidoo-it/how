@@ -1,0 +1,45 @@
+# (C)opyright Dirk Holtwick, 2017-02-03 <dirk.holtwick@gmail.com>
+
+# HSTS https://www.cyon.ch/support/a/wie-aktiviere-ich-http-strict-transport-security-hsts-fur-meine-website
+# Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+
+Header set Strict-Transport-Security "max-age=3600" env=HTTPS
+
+Header set X-Frame-Options SAMEORIGIN
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Content-Type-Options nosniff
+
+Header set Referrer-Policy same-origin
+
+ErrorDocument 404 /404/index.html
+
+<IfModule mod_expires.c>
+  # Enable expirations.
+  ExpiresActive On
+
+  # Cache all files for 2 weeks after access (A).
+  ExpiresDefault A31536000
+
+  <FilesMatch (\.html)$>
+    ExpiresActive Off
+  </FilesMatch>
+ </IfModule>
+
+RewriteEngine on
+
+# Force https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+
+# #if
+# RewriteCond %{HTTP:Accept-Language} ^((?!en).)*de [NC]
+# #then
+# RewriteRule ^\/?(?!de\/|en\/)([^\.]*)$ /de/$1 [L,R=301]
+# #else
+# RewriteRule ^\/?(?!de\/|en\/)([^\.]*)$ /en/$1 [L,R=301]
+
+# RewriteRule ^\/?(?!de\/|en\/)(.*)$ /de/$1 [L,R=301]
+
+# Optional .html for nicer URLs
+# RewriteRule ^([^.]+[^/])$ $1.html [PT]
+ 

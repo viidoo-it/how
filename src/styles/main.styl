@@ -1,0 +1,79 @@
+@import "./markdown.css";
+@require "twindy";
+
+tw-reset();
+
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #fefefe;
+  color: -gray-900;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: serif;
+  font-size: 16;
+}
+
+a {
+  color: -blue-700;
+
+  &:hover, &:active {
+    color: -blue-500;
+  }
+}
+
+#app {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.app-header, .app-footer, .app-content {
+  padding-x: 32;
+  margin-x: auto;
+  max-width: 800;
+}
+
+.app-header {
+  font-family: sans;
+  text-size-adjust: none;
+  padding-y: 32;
+  font-size: 24;
+  line-height: px(24);
+  font-weight: 700;
+  color: -gray-900;
+
+  a {
+    color: -gray-900;
+    display: flex;
+  }
+
+  img {
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    margin-right: 8;
+  }
+}
+
+.app-footer {
+  font-family: sans;
+  font-size: 14;
+  padding-y: 32;
+  padding-top: 64;
+  opacity: 0.8;
+
+  // color: -gray-700;
+  a {
+    color: -blue-900;
+  }
+}
+
+.prose {
+  use: prose-float;
+}
