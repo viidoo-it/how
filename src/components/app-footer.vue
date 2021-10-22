@@ -8,16 +8,16 @@ const toggleDark = useToggle(isDark)
 
 <template>
   <div class="app-footer">
-    Written by <a href="https://holtwick.de?ref=how">Dirk Holtwick</a> |
+    Written by <a href="https://holtwick.de?ref=how">Dirk Holtwick</a> | |
     <a href="https://holtwick.de/imprint?ref=how">Imprint</a> |
-    <a href="https://github.com/holtwick">GitHub</a> |
-    <a href="https://twitter.com/holtwick">Twitter</a>
+    <a href="https://twitter.com/holtwick">Twitter</a> |
+    <a href="https://github.com/holtwick">GitHub</a>
     <template v-if="false">
       |
       <a @click="toggleDark()" href="#toggleDarkMode">{{
         isDark ? "Light" : "Dark"
       }}</a>
     </template>
-    | v{{ pkg.version }}
+    | <a href="https://github.com/viidoo-it/how">v{{ pkg.version }}</a>
   </div>
 </template>
