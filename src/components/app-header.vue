@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { isClient } from "../config"
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="app-header">

@@ -18,16 +18,18 @@
     "twindy": "^0.13.6",
     "twindy-headless": "^0.11.13",
     "vue": "^3.2.16",
-    "vue-router": "4",
+    "vue-i18n": "9.1.9",
+    "vue-router": "^4.0.12",
     "zeed": "^0.7.48"
   },
   "devDependencies": {
-    "@types/node": "^16.11.2",
+    "@types/node": "^16.11.4",
     "@vitejs/plugin-vue": "^1.9.3",
     "cheap-watch": "^1.0.4",
-    "critters": "^0.0.11",
+    "critters": "^0.0.14",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
+    "markdown-it": "^12.2.0",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-link-attributes": "^3.0.0",
     "markdown-it-prism": "^2.2.1",
@@ -36,7 +38,7 @@
     "vite": "^2.6.10",
     "vite-imagetools": "^3.8.0",
     "vite-plugin-md": "^0.11.2",
-    "vite-ssg": "^0.15.4",
+    "vite-ssg": "^0.15.5",
     "vue-tsc": "^0.28.7",
     "zeed-dom": "^0.9.11"
   }

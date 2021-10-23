@@ -6,6 +6,31 @@ import meta from "./metadata.json"
 
 const log = Logger("router")
 
+function generateLanguageRoutes(lang: "de" | "en") {
+  return [
+    {
+      path: "/posts",
+      component: AppBlog,
+      children: [
+        // {
+        //   path: "",
+        //   name: `${lang}-}blog`,
+        //   component: () => import("./pages/index.vue"),
+        // },
+        ...meta.map((post) => {
+          return {
+            path: post.slug,
+            name: `${lang}-posts-${post.slug}`,
+            // props: { post, name: post.name },
+            meta: { post, lang },
+            component: () => import(`./posts/${post.name}.md`),
+          }
+        }),
+      ],
+    },
+  ]
+}
+
 export const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
@@ -13,26 +38,27 @@ export const routes: Array<RouteRecordRaw> = [
     component: () => import("./pages/index.vue"),
   },
 
-  {
-    path: "/posts",
-    component: AppBlog,
-    children: [
-      {
-        path: "",
-        name: "blog",
-        component: () => import("./pages/index.vue"),
-      },
-      ...meta.map((post) => {
-        return {
-          path: post.slug,
-          name: `posts-${post.slug}`,
-          props: { post, name: post.name },
-          meta: { post },
-          component: () => import(`./posts/${post.name}.md`),
-        }
-      }),
-    ],
-  },
+  ...generateLanguageRoutes("en"),
+
+  // {
+  //   path: "/de",
+  //   name: "de",
+  //   component: () => import("./pages/index.vue"),
+  //   children: generateLanguageRoutes("de"),
+  //   meta: {
+  //     lang: "de",
+  //   },
+  // },
+
+  // {
+  //   path: "/en",
+  //   name: "en",
+  //   component: () => import("./pages/index.vue"),
+  //   children: generateLanguageRoutes("en"),
+  //   meta: {
+  //     lang: "de",
+  //   },
+  // },
 
   {
     path: "/email",
