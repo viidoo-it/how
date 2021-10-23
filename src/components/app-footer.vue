@@ -5,7 +5,6 @@ import pkg from "../../package.json"
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
-
 const { t, locale, availableLocales } = useI18n()
 </script>
 
@@ -21,7 +20,7 @@ const { t, locale, availableLocales } = useI18n()
         isDark ? "Light" : "Dark"
       }}</a>
     </template>
-    | {{ locale.toString() }} {{ availableLocales }} |
+    | {{ locale }} |
     <a href="https://github.com/viidoo-it/how">v{{ pkg.version }}</a>
   </div>
 </template>
