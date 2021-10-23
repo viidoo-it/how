@@ -11,7 +11,7 @@ const { t, locale, availableLocales } = useI18n()
 <template>
   <div class="app-footer">
     {{ t("madeBy") }} <a href="https://holtwick.de?ref=how">Dirk Holtwick</a> |
-    <a href="https://holtwick.de/imprint?ref=how">Imprint</a> |
+    <a href="https://holtwick.de/imprint?ref=how">{{ t("imprint") }}</a> |
     <a href="https://twitter.com/holtwick">Twitter</a> |
     <a href="https://github.com/holtwick">GitHub</a>
     <template v-if="false">

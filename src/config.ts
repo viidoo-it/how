@@ -1,6 +1,6 @@
 export const BASE_URL = "https://how.viidoo.it"
 export const ICON_URL = `${BASE_URL}/icon.svg`
-export const DESCRIPTION = `Personal developer diary and playground. Pronounced "how we do it".`
+export const DESCRIPTION = `Personal developer diary and sandbox. Pronounced "how we do it".`
 
 // todo: really mean "production"
 

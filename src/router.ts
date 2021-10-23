@@ -10,7 +10,6 @@ function generateLanguageRoutes(lang: "de" | "en") {
   return [
     {
       path: `/${lang}`,
-      name: lang,
       component: () => import("./pages/index.vue"),
       meta: {
         lang,
@@ -18,17 +17,17 @@ function generateLanguageRoutes(lang: "de" | "en") {
     },
     {
       path: `/${lang}/posts`,
-      name: `${lang}-posts`,
       component: AppBlog,
       children: [
-        ...meta.map((post) => {
-          return {
-            path: post.slug,
-            name: `${lang}-posts-${post.slug}`,
-            meta: { post, lang },
-            component: () => import(`./posts/${post.name}.md`),
-          }
-        }),
+        ...meta
+          .filter((post) => (post.lang ?? "en") === lang)
+          .map((post) => {
+            return {
+              path: post.slug,
+              meta: { post, lang },
+              component: () => import(`./posts/${post.name}.md`),
+            }
+          }),
       ],
       meta: {
         lang,
@@ -40,7 +39,6 @@ function generateLanguageRoutes(lang: "de" | "en") {
 export const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "home",
     component: () => import("./pages/index.vue"),
   },
 
@@ -57,8 +55,6 @@ export const routes: Array<RouteRecordRaw> = [
       ...meta.map((post) => {
         return {
           path: post.slug,
-          name: `email-${post.slug}`,
-          props: { post, name: post.name },
           meta: { post },
           component: () => import(`./posts/${post.name}.md`),
         }
