@@ -12,3 +12,9 @@ declare module "*.md" {
   const Component: ComponentOptions
   export default Component
 }
+
+//
+
+declare interface Window {
+  // extend the window
+}

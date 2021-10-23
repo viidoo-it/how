@@ -5,6 +5,11 @@
   --prism-font-family: "Input Mono", monospace;
 }
 
+html {
+  --code-foreground: #333;
+  --code-background: #efefef;
+}
+
 html:not(.dark) .prose {
   --prism-foreground: #393a34;
   --prism-background: #fbfbfb;

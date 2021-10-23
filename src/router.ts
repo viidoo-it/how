@@ -1,31 +1,60 @@
 import { RouteRecordRaw } from "vue-router"
 import { Logger } from "zeed"
 import AppBlog from "./components/app-blog.vue"
+import AppEmail from "./components/app-email.vue"
 import meta from "./metadata.json"
 
 const log = Logger("router")
 
+function generateLanguageRoutes(lang: "de" | "en") {
+  return [
+    {
+      path: `/${lang}`,
+      component: () => import("./pages/index.vue"),
+      meta: {
+        lang,
+      },
+    },
+    {
+      path: `/${lang}/posts`,
+      component: AppBlog,
+      children: [
+        ...meta
+          .filter((post) => (post.lang ?? "en") === lang)
+          .map((post) => {
+            return {
+              path: post.slug,
+              meta: { post, lang },
+              component: () => import(`./posts/${post.name}.md`),
+            }
+          }),
+      ],
+      meta: {
+        lang,
+      },
+    },
+  ]
+}
+
 export const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "home",
     component: () => import("./pages/index.vue"),
   },
 
+  ...generateLanguageRoutes("en"),
+  ...generateLanguageRoutes("de"),
+
   {
-    path: "/posts",
-    component: AppBlog,
+    path: "/email",
+    component: AppEmail,
+    meta: {
+      pure: true,
+    },
     children: [
-      {
-        path: "",
-        name: "blog",
-        component: () => import("./pages/index.vue"),
-      },
       ...meta.map((post) => {
         return {
-          path: post.href,
-          name: `posts-${post.slug}`,
-          props: { post, name: post.name },
+          path: post.slug,
           meta: { post },
           component: () => import(`./posts/${post.name}.md`),
         }

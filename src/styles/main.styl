@@ -41,12 +41,10 @@ a {
 
 .app-header {
   font-family: sans;
-  text-size-adjust: none;
   padding-y: 32;
-  font-size: 24;
   line-height: px(24);
-  font-weight: 700;
   color: -gray-900;
+  use: stack-x;
 
   a {
     color: -gray-900;
@@ -58,6 +56,22 @@ a {
     width: 1em;
     display: inline-block;
     margin-right: 8;
+  }
+
+  &-title {
+    use: grow;
+    font-size: 24;
+    font-weight: 700;
+  }
+
+  &-locale {
+    display: block;
+    background: -gray-200;
+    color: gray-500 !important;
+    font-weight: 400;
+    padding-x: 8;
+    border-radius: 8;
+    font-size: 14;
   }
 }
 
@@ -76,4 +90,9 @@ a {
 
 .prose {
   use: prose-float;
+}
+
+.email {
+  padding-y: 24;
+  margin-x: auto;
 }

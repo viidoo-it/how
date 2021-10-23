@@ -1,7 +1,7 @@
 import CheapWatch from "cheap-watch"
 import fs from "fs"
 import matter from "gray-matter"
-import path, { resolve, basename } from "path"
+import path, { basename, resolve } from "path"
 
 const postsFolder = resolve(process.cwd(), "src/posts")
 const metadataPath = resolve(process.cwd(), "src/metadata.json")
@@ -22,10 +22,13 @@ function getPost(file: string, postDir: string, asFeed: boolean = false) {
   const { data, excerpt, content } = matter(src, { excerpt: true })
   const name = basename(file).replace(/\.md$/, "")
   const slug = data.slug || name
+  const lang = data.lang ?? "en"
+
   const post = {
     title: data.title,
     slug,
     name,
+    lang,
     href: `/posts/${slug}`,
     date: formatDate(data.date),
     excerpt,
