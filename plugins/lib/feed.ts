@@ -3,7 +3,7 @@ import fs from "fs"
 import { resolve } from "path"
 import { parseDate } from "zeed"
 import { parseHTML } from "zeed-dom"
-import { ICON_URL, BASE_URL } from "../../src/config"
+import { BASE_URL, ICON_URL } from "../../src/config"
 import { getPosts } from "./posts"
 
 const rssPath = resolve(process.cwd(), "dist/feed")

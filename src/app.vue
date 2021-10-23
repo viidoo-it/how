@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useHead } from "@vueuse/head"
-import { useRouter } from "vue-router"
 import AppFooter from "./components/app-footer.vue"
 import AppHeader from "./components/app-header.vue"
 import { DESCRIPTION, ICON_URL } from "./config"
@@ -19,9 +18,9 @@ useHead({
   ],
 })
 
-const rr = useRouter()
-  .getRoutes()
-  .map((r) => r.path)
+// const rr = useRouter()
+//   .getRoutes()
+//   .map((r) => r.path)
 </script>
 
 <template>

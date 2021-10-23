@@ -1,6 +1,5 @@
-import { watchPosts } from "./lib/posts"
 import { Plugin } from "vite"
-import { Hmac } from "crypto"
+import { watchPosts } from "./lib/posts"
 
 export default function PreVite(): Plugin {
   // const virtualFileId = "posts.json"
