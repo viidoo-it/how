@@ -9,24 +9,30 @@ const log = Logger("router")
 function generateLanguageRoutes(lang: "de" | "en") {
   return [
     {
-      path: "/posts",
+      path: `/${lang}`,
+      name: lang,
+      component: () => import("./pages/index.vue"),
+      meta: {
+        lang,
+      },
+    },
+    {
+      path: `/${lang}/posts`,
+      name: `${lang}-posts`,
       component: AppBlog,
       children: [
-        // {
-        //   path: "",
-        //   name: `${lang}-}blog`,
-        //   component: () => import("./pages/index.vue"),
-        // },
         ...meta.map((post) => {
           return {
             path: post.slug,
             name: `${lang}-posts-${post.slug}`,
-            // props: { post, name: post.name },
             meta: { post, lang },
             component: () => import(`./posts/${post.name}.md`),
           }
         }),
       ],
+      meta: {
+        lang,
+      },
     },
   ]
 }
@@ -39,26 +45,7 @@ export const routes: Array<RouteRecordRaw> = [
   },
 
   ...generateLanguageRoutes("en"),
-
-  // {
-  //   path: "/de",
-  //   name: "de",
-  //   component: () => import("./pages/index.vue"),
-  //   children: generateLanguageRoutes("de"),
-  //   meta: {
-  //     lang: "de",
-  //   },
-  // },
-
-  // {
-  //   path: "/en",
-  //   name: "en",
-  //   component: () => import("./pages/index.vue"),
-  //   children: generateLanguageRoutes("en"),
-  //   meta: {
-  //     lang: "de",
-  //   },
-  // },
+  ...generateLanguageRoutes("de"),
 
   {
     path: "/email",
