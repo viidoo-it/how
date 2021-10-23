@@ -42,6 +42,8 @@ const otherLangRoute = computed(() => {
         how.viidoo.it
       </router-link>
     </div>
-    <router-link :to="otherLangRoute">de / en</router-link>
+    <router-link class="app-header-locale" :to="otherLangRoute">
+      de | en
+    </router-link>
   </div>
 </template>
