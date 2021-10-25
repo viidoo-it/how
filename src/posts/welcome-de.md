@@ -10,7 +10,7 @@ Im Alltag als Software Entwickler gibt es immer wieder diese Momente, an denen d
 
 Mich haben zum Beispiel [vite](https://vitejs.dev/) und [vue](https://v3.vuejs.org/) sehr begeistert. Nachdem ich mich viele Jahre überwiegend mit der Entwicklung von Software für macOS und iOS befasst habe, hatte ich die enge Welt von Apple und deren Entwicklungsumgebung mit Xcode und Swift / Objective-C satt. Was liegt da also näher, als eine neue lebhafte Plattform zu suchen, die auch nicht auf ein Betriebssystem beschränkt ist: das Web!
 
-Nun ist dort auch nicht alles rosiger Sonnenschein und einiges hat nicht immer die Qualität, die ich mir wünschen würde. Doch finden hier die Innovationen im Bereich neuer Entwicklungsmuster statt, die dann auf andere Plattformen übertragen werden. Zuletzt war das gut zu sehen bei SwiftUI, dass sich der Erfahrungen und Denkmuster von React und Vue bedient.
+Nun ist dort auch nicht alles eitel Sonnenschein und einiges hat nicht immer die Qualität, die ich mir wünschen würde. Doch finden hier die Innovationen im Bereich neuer Entwicklungsmuster statt, die dann auf andere Plattformen übertragen werden. Zuletzt war das gut zu sehen bei SwiftUI, dass sich der Erfahrungen und Denkmuster von React und Vue bedient.
 
 Entwicklung muss auch Spaß machen und die vergeht leider auch schnell, wenn viel Zeit mir Warten zu verbringen ist. Bei Xcode ist das so, aber auch in der Javascript Welt war es so mit Webpack und anderen. [vite](https://vitejs.dev/) hingegen brachte einen Paradigmenwechsel, denn es ist so schnell, dass es kaum noch zu spüren ist. Änderungen am Code erscheinen sofort in der Web-App. Es macht doch ein Unterschied, wenn es schnell geht, weil das spielerische wieder zurückkehrt und so neue Dinge entstehen können.
 
