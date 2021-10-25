@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import { useHead } from "@vueuse/head"
+import { useI18n } from "vue-i18n"
 import AppFooter from "./components/app-footer.vue"
 import AppHeader from "./components/app-header.vue"
 import { DESCRIPTION, ICON_URL } from "./config"
 
+const { t } = useI18n()
+
+const title = t("title")
+
 useHead({
-  title: "How we do it. Developer diary.",
+  title,
   meta: [
-    { property: "og:title", content: "Anthony Fu" },
+    { property: "og:title", content: title },
     { property: "og:image", content: ICON_URL },
     {
       name: "description",

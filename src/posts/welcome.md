@@ -9,7 +9,7 @@ In everyday life as a software developer, there are always those moments when yo
 
 For example, I've been very excited about [vite](https://vitejs.dev/) and [vue](https://v3.vuejs.org/). After many years of mostly developing software for macOS and iOS, I was tired of the narrow world of Apple and their development environment with Xcode and Swift / Objective-C. So what could be more obvious than to look for a new lively platform that is also not limited to one operating system: _the web_!
 
-Now, not everything is rosy sunshine there either and some things don't always have the quality I would wish for. But this is where the innovations take place in the area of new development patterns, which are then transferred to other platforms. Most recently, this was well seen with SwiftUI, which uses the experiences and thought patterns of React and Vue.
+Now, not everything is sunshine there either and some things don't always have the quality I would wish for. But this is where the innovations take place in the area of new development patterns, which are then transferred to other platforms. Most recently, this was well seen with SwiftUI, which uses the experiences and thought patterns of React and Vue.
 
 Development must also be fun, and unfortunately this is quickly lost when there is a lot of time to spend waiting on compilation. This is the case with Xcode, but it was also the case in the Javascript world with Webpack and others. [vite](https://vitejs.dev/) on the other hand brought a paradigm shift, because it is so fast that it is hardly noticeable. Changes to the code appear immediately in the web app. It does make a difference when it's fast, because the playfulness returns, allowing new things to emerge.
 
