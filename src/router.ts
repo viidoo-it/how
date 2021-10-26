@@ -16,6 +16,13 @@ function generateLanguageRoutes(lang: "de" | "en") {
       },
     },
     {
+      path: `/${lang}/projects`,
+      component: () => import("./pages/projects.vue"),
+      meta: {
+        lang,
+      },
+    },
+    {
       path: `/${lang}/posts`,
       component: AppBlog,
       children: [

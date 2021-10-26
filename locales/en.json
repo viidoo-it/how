@@ -1,6 +1,9 @@
 {
-  "title": "How we do it. Developer diary.",
   "description": "Personal developer diary and sandbox. Pronounced \"how we do it\".",
   "imprint": "Imprint",
-  "madeBy": "Written by"
+  "madeBy": "Written by",
+  "projects": {
+    "title": "Projects"
+  },
+  "title": "How we do it. Developer diary."
 }

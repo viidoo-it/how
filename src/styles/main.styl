@@ -46,11 +46,6 @@ a {
   color: -gray-900;
   use: stack-x;
 
-  a {
-    color: -gray-900;
-    display: flex;
-  }
-
   img {
     height: 1em;
     width: 1em;
@@ -64,14 +59,44 @@ a {
     font-weight: 700;
   }
 
-  &-locale {
-    display: block;
-    background: -gray-200;
-    color: gray-500 !important;
-    font-weight: 400;
-    padding-x: 8;
-    border-radius: 8;
-    font-size: 14;
+  a {
+    color: -gray-900;
+    display: flex;
+
+    &.app-header-locale {
+      display: block;
+      background: -gray-200;
+      color: -gray-400;
+      font-weight: 400;
+      padding-x: 8;
+      border-radius: 8;
+      font-size: 14;
+      margin-left: 8;
+
+      &:hover {
+        background: -gray-300;
+      }
+
+      .active {
+        color: -gray-800;
+      }
+    }
+
+    &.app-header-menu {
+      margin-x: 8;
+      font-size: 14;
+      font-weight: 700;
+
+      &.router-link-active {
+        color: -gray-700;
+      }
+
+      color: -gray-500;
+
+      &:hover {
+        color: -gray-700;
+      }
+    }
   }
 }
 
