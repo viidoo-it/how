@@ -47,7 +47,9 @@ const otherLangRoute = computed(() => {
       PROJECTS
     </router-link>
     <router-link class="app-header-locale" :to="otherLangRoute">
-      de | en
+      <span :class="{ active: lang === 'de' }">de</span>
+      |
+      <span :class="{ active: !lang || lang === 'en' }">en</span>
     </router-link>
   </div>
 </template>
