@@ -64,7 +64,7 @@ a {
     font-weight: 700;
   }
 
-  &-locale {
+  a&-locale {
     display: block;
     background: -gray-200;
     color: gray-500 !important;
@@ -72,6 +72,23 @@ a {
     padding-x: 8;
     border-radius: 8;
     font-size: 14;
+    margin-left: 8;
+  }
+
+  a&-menu {
+    margin-x: 8;
+    font-size: 14;
+    font-weight: 700;
+
+    &.router-link-active {
+      color: -gray-700;
+    }
+
+    color: -gray-500;
+
+    &:hover {
+      color: -gray-700;
+    }
   }
 }
 
