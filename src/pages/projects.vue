@@ -28,7 +28,9 @@ const currentPosts = computed(() =>
           <div class="project-title">{{ p.title }}</div>
           <div class="project-description">{{ p.description }}</div>
           <div class="project-url">
-            <a :href="p.url">{{ toHumanReadableUrl(p.url) }}</a>
+            <a :href="`${p.url}?ref=how`" target="_blank">{{
+              toHumanReadableUrl(p.url)
+            }}</a>
           </div>
           <div class="project-tags" v-if="p.tags">
             <template v-for="tag in p.tags">

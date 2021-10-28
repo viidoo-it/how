@@ -3,7 +3,6 @@ interface ProjectInfo {
   title: string
   description: string
   url: string
-  openSource: boolean
   tags: string[]
 }
 
@@ -13,7 +12,6 @@ export const projects: ProjectInfo[] = [
     title: "Receipts App",
     description: "Smart document management for finances",
     url: "https://www.receipts-app.com/",
-    openSource: false,
     tags: ["app", "finance", "documents", "macos"],
   },
   {
@@ -21,7 +19,6 @@ export const projects: ProjectInfo[] = [
     title: "PDFfify App",
     description: "Create searchable PDF and save disk space",
     url: "https://pdfify.app/",
-    openSource: false,
     tags: ["app", "pdf", "documents", "macos"],
   },
   {
@@ -29,15 +26,55 @@ export const projects: ProjectInfo[] = [
     title: "Zeed",
     description: "Simple Typescript foundation library",
     url: "https://github.com/holtwick/zeed/",
-    openSource: true,
-    tags: ["javascript", "node", "browser"],
+    tags: ["opensource", "javascript", "node", "browser"],
   },
   {
     name: "zeed-dom",
     title: "Zeed-DOM",
     description: "Lightweight offline DOM and parser",
     url: "https://github.com/holtwick/zeed-dom/",
-    openSource: true,
-    tags: ["javascript", "node"],
+    tags: ["opensource", "javascript", "node"],
+  },
+  {
+    name: "briefing",
+    title: "Briefing",
+    description: "Secure direct video group chat ",
+    url: "https://brie.fi/ng",
+    tags: ["opensource", "javascript", "webrtc"],
+  },
+  {
+    name: "peer-school",
+    title: "Peer.School",
+    description: "Simple P2P teaching platform",
+    url: "https://peer.school",
+    tags: ["opensource", "javascript", "webrtc", "school"],
+  },
+  {
+    name: "zerva",
+    title: "Zerva",
+    description: "Simple event driven services",
+    url: "https://github.com/holtwick/zerva",
+    tags: ["opensource", "javascript", "node"],
+  },
+  {
+    name: "hostic",
+    title: "Hostic",
+    description: "Static website generator",
+    url: "https://github.com/holtwick/hostic",
+    tags: ["opensource", "javascript", "node"],
+  },
+  {
+    name: "twindy",
+    title: "Twindy",
+    description: "CSS framework in Stylus",
+    url: "https://github.com/holtwick/twindy",
+    tags: ["opensource", "css", "stylus"],
+  },
+  {
+    name: "twindy-headless",
+    title: "Twindy-Headless",
+    description: "Vue3 UI components for Twindy",
+    url: "https://github.com/holtwick/twindy-headless",
+    tags: ["opensource", "twindy", "vue"],
   },
 ]

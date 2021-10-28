@@ -115,6 +115,7 @@ a {
 
 .prose {
   use: prose;
+  line-height: 1.4;
 }
 
 .email {
@@ -144,17 +145,24 @@ a {
   }
 
   &-title {
+    font-family: sans;
     font-weight: 600;
   }
 
   &-description {
+    margin-top: 4;
     color: -gray-800;
     font-style: italic;
   }
 
+  &-url {
+    margin-top: 4;
+  }
+
   &-tags {
     font-family: sans;
-    margin-top: 8;
+    margin-top: 4;
+    line-height: px(14);
 
     &-item {
       color: white;
@@ -163,8 +171,10 @@ a {
       border-radius: 4;
       display: inline-block;
       font-size: 12;
-      margin-right: 8;
+      margin-top: 4;
+      margin-right: 4;
 
+      // font-weight: 600;
       &:before {
         content: "#";
       }
