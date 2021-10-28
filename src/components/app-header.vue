@@ -20,8 +20,12 @@ const lang = computed(() => {
 
 const otherLangRoute = computed(() => {
   const newPrefix = `/${lang.value === "de" ? "en" : "de"}`
-  const newPath = `${newPrefix}${route.path.slice(3)}`
-  log("newPath", newPath)
+  let newPath = `${newPrefix}${route.path.slice(3)}`
+
+  // fixes trailing slash; depends on: ssgOptions: {dirStyle: "nested"}
+  if (newPath.endsWith("/")) newPath = newPath.slice(0, -1)
+
+  // log("newPath", newPath)
   if (
     router
       .getRoutes()
