@@ -114,10 +114,60 @@ a {
 }
 
 .prose {
-  use: prose-float;
+  use: prose;
 }
 
 .email {
   padding-y: 24;
   margin-x: auto;
+}
+
+.project {
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(240px, 1fr)
+    );
+    gap: px(16);
+  }
+
+  &-card {
+    min-width: 240px;
+    padding: 16;
+    background: -gray-100;
+    border-radius: 8;
+
+    &:hover {
+      background: -gray-200;
+    }
+  }
+
+  &-title {
+    font-weight: 600;
+  }
+
+  &-description {
+    color: -gray-800;
+    font-style: italic;
+  }
+
+  &-tags {
+    font-family: sans;
+    margin-top: 8;
+
+    &-item {
+      color: white;
+      background: -gray-500;
+      padding: 4 8;
+      border-radius: 4;
+      display: inline-block;
+      font-size: 12;
+      margin-right: 8;
+
+      &:before {
+        content: "#";
+      }
+    }
+  }
 }
