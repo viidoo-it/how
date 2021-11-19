@@ -1,5 +1,5 @@
 ---
-title: "Liebes Tagebuch..."
+title: "Liebes Tagebuch... Geheimnisse eines Entwicklers"
 description: I am actually an iOS and macOS developer, but during the pandemia I started my video chat related open source projects.
 date: "2021-10-22"
 lang: de
