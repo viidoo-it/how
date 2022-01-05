@@ -4,6 +4,8 @@ description: I am actually an iOS and macOS developer, but during the pandemia I
 date: "2021-10-22"
 lang: de
 slug: welcome
+tags:
+  - general
 ---
 
 Im Alltag als Software Entwickler gibt es immer wieder diese Momente, an denen das Gefühl aufkommt: "Das ist gerade so spannend, das könnte vielleicht auch andere interessieren." Nicht zuletzt deswegen, weil zu den Tätigkeiten eines Entwicklers auch gehört, von anderen Entwicklern zu erfahren, wie sie Probleme gelöst haben und was sie zuletzt sehr begeistert hat.

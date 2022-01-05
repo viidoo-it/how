@@ -3,6 +3,8 @@ title: "Dear Diary... Secrets of a developer"
 description: "In everyday life as a software developer, there are always those moments when you get the feeling: This is so exciting right now, maybe it could interest others, too."
 date: "2021-10-22"
 lang: en
+tags:
+  - general
 ---
 
 In everyday life as a software developer, there are always those moments when you get the feeling: _"This is so exciting right now, maybe it could interest others, too."_ Not least because part of a developer's job is to hear from other developers how they solved problems and what gained their focus recently.
